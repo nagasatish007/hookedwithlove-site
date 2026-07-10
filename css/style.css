@@ -103,11 +103,37 @@ button {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo-icon {
+    font-size: 1.6rem;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.logo-main {
     font-family: var(--font-heading);
-    font-size: 1.4rem;
-    font-weight: 600;
+    font-size: 1.3rem;
+    font-weight: 700;
     color: var(--color-dark);
     letter-spacing: -0.02em;
+}
+
+.logo-tagline {
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    font-style: italic;
+    color: var(--color-rose);
+    letter-spacing: 0.5px;
+    opacity: 0.8;
 }
 
 .main-nav {
