@@ -120,11 +120,17 @@ button {
 }
 
 .logo-main {
-    font-family: var(--font-heading);
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: var(--color-dark);
-    letter-spacing: -0.02em;
+    font-family: 'Pacifico', cursive;
+    font-size: 1.4rem;
+    font-weight: 400;
+    background: linear-gradient(135deg, #e84393, #fd79a8, #e17055, #fdcb6e, #00b894, #0984e3, #6c5ce7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
+    filter: drop-shadow(1px 2px 2px rgba(0,0,0,0.15));
+    letter-spacing: 0.5px;
+    position: relative;
 }
 
 .logo-tagline {
@@ -1067,9 +1073,14 @@ button {
 }
 
 .footer-logo {
-    font-family: var(--font-heading);
-    font-size: 1.3rem;
-    font-weight: 600;
+    font-family: 'Pacifico', cursive;
+    font-size: 1.5rem;
+    font-weight: 400;
+    background: linear-gradient(135deg, #e84393, #fd79a8, #e17055, #fdcb6e, #00b894, #0984e3, #6c5ce7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(1px 2px 2px rgba(0,0,0,0.1));
     margin-bottom: 4px;
     opacity: 1 !important;
 }
