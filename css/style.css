@@ -830,3 +830,289 @@ button {
         font-size: 0.82rem;
     }
 }
+
+/* ============================================
+   SKU Badge
+   ============================================ */
+.gallery-card-image {
+    position: relative;
+}
+
+.sku-badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: rgba(61, 54, 48, 0.85);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    z-index: 2;
+}
+
+.gallery-card-sku {
+    font-size: 0.75rem;
+    color: var(--color-dark);
+    opacity: 0.5;
+    margin-bottom: 4px;
+    letter-spacing: 0.3px;
+}
+
+/* ============================================
+   Image Hover Overlay
+   ============================================ */
+.image-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(61, 54, 48, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity var(--transition);
+    z-index: 1;
+}
+
+.gallery-card:hover .image-overlay {
+    opacity: 1;
+}
+
+.overlay-icon {
+    font-size: 2rem;
+    filter: brightness(2);
+}
+
+/* ============================================
+   Lightbox
+   ============================================ */
+.lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lightbox-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-size: 2.5rem;
+    color: white;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 3001;
+}
+
+.lightbox-close:hover {
+    opacity: 1;
+}
+
+.lightbox-content {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 85vh;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: var(--radius-md);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-caption {
+    color: white;
+    font-size: 1rem;
+    margin-top: 16px;
+    opacity: 0.8;
+    font-family: var(--font-heading);
+}
+
+/* ============================================
+   Coming Soon Placeholder
+   ============================================ */
+.coming-soon-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--color-beige) 0%, var(--color-rose-light) 100%);
+    border: 2px dashed var(--color-rose);
+}
+
+.coming-soon-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.coming-soon-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.coming-soon-text {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--color-dark);
+    opacity: 0.7;
+    margin-bottom: 4px;
+}
+
+.coming-soon-subtext {
+    font-size: 0.8rem;
+    color: var(--color-dark);
+    opacity: 0.4;
+    font-style: italic;
+}
+
+.coming-soon-card:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* ============================================
+   Back to Top Button
+   ============================================ */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 48px;
+    height: 48px;
+    background: var(--color-sage);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    cursor: pointer;
+    z-index: 900;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(143, 174, 126, 0.4);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: var(--color-sage-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(143, 174, 126, 0.5);
+}
+
+/* ============================================
+   Enhanced Footer
+   ============================================ */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-brand {
+    text-align: center;
+}
+
+.footer-logo {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+    opacity: 1 !important;
+}
+
+.footer-tagline {
+    font-size: 0.85rem;
+    opacity: 0.6 !important;
+}
+
+.footer-links {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links a {
+    font-size: 0.88rem;
+    opacity: 0.7;
+    transition: opacity var(--transition);
+}
+
+.footer-links a:hover {
+    opacity: 1;
+    color: var(--color-sage-dark);
+}
+
+.footer-social {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-social a {
+    font-size: 1.4rem;
+    transition: transform var(--transition);
+}
+
+.footer-social a:hover {
+    transform: scale(1.2);
+}
+
+/* ============================================
+   Lazy Load Animation
+   ============================================ */
+.gallery-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease, box-shadow var(--transition);
+}
+
+.gallery-card.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger animation for visible cards */
+.gallery-card:nth-child(1).loaded { transition-delay: 0s; }
+.gallery-card:nth-child(2).loaded { transition-delay: 0.05s; }
+.gallery-card:nth-child(3).loaded { transition-delay: 0.1s; }
+.gallery-card:nth-child(4).loaded { transition-delay: 0.15s; }
+.gallery-card:nth-child(5).loaded { transition-delay: 0.2s; }
+.gallery-card:nth-child(6).loaded { transition-delay: 0.25s; }
+.gallery-card:nth-child(7).loaded { transition-delay: 0.3s; }
+.gallery-card:nth-child(8).loaded { transition-delay: 0.35s; }
+
+@media (min-width: 640px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .footer-brand {
+        text-align: left;
+    }
+}

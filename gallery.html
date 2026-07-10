@@ -10,134 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ProductGroup",
-        "name": "Hooked With Love – Handmade Crochet Collection",
-        "description": "Handcrafted crochet flowers, fruits, and accessories",
-        "url": "https://hookedwithlove.in/gallery.html",
-        "hasVariant": [
-            {
-                "@type": "Product",
-                "name": "Crocheted Sunflower Bouquet",
-                "description": "Beautiful handcrafted crocheted sunflower bouquet",
-                "image": "https://hookedwithlove.in/images/sunflower_bouquet.jpg",
-                "sku": "HWL-001",
-                "offers": {
-                    "@type": "Offer",
-                    "price": "1200",
-                    "priceCurrency": "INR",
-                    "availability": "https://schema.org/InStock"
-                }
-            },
-            {
-                "@type": "Product",
-                "name": "Crocheted Cherry Pair",
-                "description": "Adorable handcrafted crocheted cherry pair",
-                "image": "https://hookedwithlove.in/images/cherry_pairs.jpg",
-                "sku": "HWL-002",
-                "offers": {
-                    "@type": "Offer",
-                    "price": "450",
-                    "priceCurrency": "INR",
-                    "availability": "https://schema.org/InStock"
-                }
-            },
-            {
-                "@type": "Product",
-                "name": "Crocheted Sunflower Cone",
-                "description": "Charming crocheted sunflower cone arrangement",
-                "image": "https://hookedwithlove.in/images/sunflower_cone.jpg",
-                "sku": "HWL-003",
-                "offers": {
-                    "@type": "Offer",
-                    "price": "950",
-                    "priceCurrency": "INR",
-                    "availability": "https://schema.org/InStock"
-                }
-            },
-            {
-                "@type": "Product",
-                "name": "Crocheted Strawberry Hair Clip",
-                "description": "Cute crocheted strawberry hair clip accessory",
-                "image": "https://hookedwithlove.in/images/strawberry_clip.jpg",
-                "sku": "HWL-004",
-                "offers": {
-                    "@type": "Offer",
-                    "price": "350",
-                    "priceCurrency": "INR",
-                    "availability": "https://schema.org/InStock"
-                }
-            },
-            {
-                "@type": "Product",
-                "name": "Crocheted Strawberry Pair",
-                "description": "Delightful crocheted strawberry pair",
-                "image": "https://hookedwithlove.in/images/strawberry_pair.jpg",
-                "sku": "HWL-005",
-                "offers": {
-                    "@type": "Offer",
-                    "price": "400",
-                    "priceCurrency": "INR",
-                    "availability": "https://schema.org/InStock"
-                }
-            },
-            {
-                "@type": "Product",
-                "name": "Single Crocheted Sunflower",
-                "description": "Single handcrafted crocheted sunflower stem",
-                "image": "https://hookedwithlove.in/images/single_sunflower.jpg",
-                "sku": "HWL-006",
-                "offers": {
-                    "@type": "Offer",
-                    "price": "250",
-                    "priceCurrency": "INR",
-                    "availability": "https://schema.org/InStock"
-                }
-            },
-            {
-                "@type": "Product",
-                "name": "Crocheted Rose Basket Clip",
-                "description": "Elegant crocheted rose basket hair clip",
-                "image": "https://hookedwithlove.in/images/rose_basket_clip.jpg",
-                "sku": "HWL-007",
-                "offers": {
-                    "@type": "Offer",
-                    "price": "500",
-                    "priceCurrency": "INR",
-                    "availability": "https://schema.org/InStock"
-                }
-            },
-            {
-                "@type": "Product",
-                "name": "Rainbow Crocheted Bow Clip",
-                "description": "Colorful rainbow crocheted bow hair clip",
-                "image": "https://hookedwithlove.in/images/rainbow_bow_clip.jpg",
-                "sku": "HWL-008",
-                "offers": {
-                    "@type": "Offer",
-                    "price": "550",
-                    "priceCurrency": "INR",
-                    "availability": "https://schema.org/InStock"
-                }
-            },
-            {
-                "@type": "Product",
-                "name": "Crocheted Red Rose Accessory",
-                "description": "Beautiful handcrafted crocheted red rose accessory",
-                "image": "https://hookedwithlove.in/images/red_rose_accessory.jpg",
-                "sku": "HWL-009",
-                "offers": {
-                    "@type": "Offer",
-                    "price": "600",
-                    "priceCurrency": "INR",
-                    "availability": "https://schema.org/InStock"
-                }
-            }
-        ]
-    }
-    </script>
 </head>
 <body>
     <!-- Header/Nav -->
@@ -173,7 +45,7 @@
             <!-- Gallery Title -->
             <div class="gallery-header">
                 <h1>Handcrafted Crochet Collection</h1>
-                <p class="gallery-subtitle">Explore by category</p>
+                <p class="gallery-subtitle">Explore by category — each piece is one of a kind</p>
             </div>
 
             <!-- Category Filter Tabs -->
@@ -189,315 +61,318 @@
             <!-- Product Grid -->
             <div class="product-grid" id="productGrid">
                 <!-- New Collection -->
-                <div class="gallery-card" data-category="new-collection">
+                <div class="gallery-card" data-category="new-collection" data-sku="HWL-001">
                     <div class="gallery-card-image">
                         <img src="images/crochet-01.jpeg" alt="Crochet Phone Case" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-icon">🔍</span>
+                        </div>
+                        <span class="sku-badge">HWL-001</span>
                     </div>
                     <div class="gallery-card-info">
                         <h3>Crochet Phone Case</h3>
+                        <p class="gallery-card-sku">SKU: HWL-001</p>
                         <p class="gallery-card-price">₹699</p>
-                        <button class="btn btn-enquiry" data-product="Crochet Phone Case" data-price="699" data-image="images/crochet-01.jpeg">Purchase Enquiry</button>
+                        <button class="btn btn-enquiry" data-product="Crochet Phone Case" data-sku="HWL-001" data-image="images/crochet-01.jpeg">Purchase Enquiry</button>
                     </div>
                 </div>
 
-                <div class="gallery-card" data-category="new-collection">
+                <div class="gallery-card" data-category="new-collection" data-sku="HWL-002">
                     <div class="gallery-card-image">
                         <img src="images/crochet-02.jpeg" alt="Crochet Creation" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-icon">🔍</span>
+                        </div>
+                        <span class="sku-badge">HWL-002</span>
                     </div>
                     <div class="gallery-card-info">
                         <h3>Crochet Creation</h3>
+                        <p class="gallery-card-sku">SKU: HWL-002</p>
                         <p class="gallery-card-price">₹89</p>
-                        <button class="btn btn-enquiry" data-product="Crochet Creation" data-price="89" data-image="images/crochet-02.jpeg">Purchase Enquiry</button>
+                        <button class="btn btn-enquiry" data-product="Crochet Creation" data-sku="HWL-002" data-image="images/crochet-02.jpeg">Purchase Enquiry</button>
                     </div>
                 </div>
 
-                <div class="gallery-card" data-category="new-collection">
+                <div class="gallery-card" data-category="new-collection" data-sku="HWL-003">
                     <div class="gallery-card-image">
                         <img src="images/crochet-03.jpeg" alt="Crochet Mini" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-icon">🔍</span>
+                        </div>
+                        <span class="sku-badge">HWL-003</span>
                     </div>
                     <div class="gallery-card-info">
                         <h3>Crochet Mini</h3>
+                        <p class="gallery-card-sku">SKU: HWL-003</p>
                         <p class="gallery-card-price">₹59</p>
-                        <button class="btn btn-enquiry" data-product="Crochet Mini" data-price="59" data-image="images/crochet-03.jpeg">Purchase Enquiry</button>
+                        <button class="btn btn-enquiry" data-product="Crochet Mini" data-sku="HWL-003" data-image="images/crochet-03.jpeg">Purchase Enquiry</button>
                     </div>
                 </div>
 
-                <div class="gallery-card" data-category="new-collection">
+                <div class="gallery-card" data-category="new-collection" data-sku="HWL-004">
                     <div class="gallery-card-image">
                         <img src="images/crochet-04.jpeg" alt="Crochet Pair" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-icon">🔍</span>
+                        </div>
+                        <span class="sku-badge">HWL-004</span>
                     </div>
                     <div class="gallery-card-info">
                         <h3>Crochet Pair</h3>
+                        <p class="gallery-card-sku">SKU: HWL-004</p>
                         <p class="gallery-card-price">₹129 / 2 pieces</p>
-                        <button class="btn btn-enquiry" data-product="Crochet Pair" data-price="129" data-image="images/crochet-04.jpeg">Purchase Enquiry</button>
+                        <button class="btn btn-enquiry" data-product="Crochet Pair" data-sku="HWL-004" data-image="images/crochet-04.jpeg">Purchase Enquiry</button>
                     </div>
                 </div>
 
-                <div class="gallery-card" data-category="new-collection">
+                <div class="gallery-card" data-category="new-collection" data-sku="HWL-005">
                     <div class="gallery-card-image">
-                        <img src="images/crochet-05.jpeg" alt="Crochet Item 5" loading="lazy">
+                        <img src="images/crochet-05.jpeg" alt="Crochet Item" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-icon">🔍</span>
+                        </div>
+                        <span class="sku-badge">HWL-005</span>
                     </div>
                     <div class="gallery-card-info">
                         <h3>Crochet Item</h3>
+                        <p class="gallery-card-sku">SKU: HWL-005</p>
                         <p class="gallery-card-price">Price on request</p>
-                        <button class="btn btn-enquiry" data-product="Crochet Item 5" data-price="" data-image="images/crochet-05.jpeg">Purchase Enquiry</button>
+                        <button class="btn btn-enquiry" data-product="Crochet Item" data-sku="HWL-005" data-image="images/crochet-05.jpeg">Purchase Enquiry</button>
                     </div>
                 </div>
 
-                <div class="gallery-card" data-category="new-collection">
+                <div class="gallery-card" data-category="new-collection" data-sku="HWL-006">
                     <div class="gallery-card-image">
-                        <img src="images/crochet-06.jpeg" alt="Crochet Item 6" loading="lazy">
+                        <img src="images/crochet-06.jpeg" alt="Crochet Item" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-icon">🔍</span>
+                        </div>
+                        <span class="sku-badge">HWL-006</span>
                     </div>
                     <div class="gallery-card-info">
                         <h3>Crochet Item</h3>
+                        <p class="gallery-card-sku">SKU: HWL-006</p>
                         <p class="gallery-card-price">Price on request</p>
-                        <button class="btn btn-enquiry" data-product="Crochet Item 6" data-price="" data-image="images/crochet-06.jpeg">Purchase Enquiry</button>
+                        <button class="btn btn-enquiry" data-product="Crochet Item" data-sku="HWL-006" data-image="images/crochet-06.jpeg">Purchase Enquiry</button>
                     </div>
                 </div>
 
-                <div class="gallery-card" data-category="new-collection">
+                <div class="gallery-card" data-category="new-collection" data-sku="HWL-007">
                     <div class="gallery-card-image">
-                        <img src="images/crochet-07.jpeg" alt="Crochet Item 7" loading="lazy">
+                        <img src="images/crochet-07.jpeg" alt="Crochet Item" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-icon">🔍</span>
+                        </div>
+                        <span class="sku-badge">HWL-007</span>
                     </div>
                     <div class="gallery-card-info">
                         <h3>Crochet Item</h3>
+                        <p class="gallery-card-sku">SKU: HWL-007</p>
                         <p class="gallery-card-price">Price on request</p>
-                        <button class="btn btn-enquiry" data-product="Crochet Item 7" data-price="" data-image="images/crochet-07.jpeg">Purchase Enquiry</button>
+                        <button class="btn btn-enquiry" data-product="Crochet Item" data-sku="HWL-007" data-image="images/crochet-07.jpeg">Purchase Enquiry</button>
                     </div>
                 </div>
 
-                <div class="gallery-card" data-category="new-collection">
+                <div class="gallery-card" data-category="new-collection" data-sku="HWL-008">
                     <div class="gallery-card-image">
-                        <img src="images/crochet-08.jpeg" alt="Crochet Item 8" loading="lazy">
+                        <img src="images/crochet-08.jpeg" alt="Crochet Item" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-icon">🔍</span>
+                        </div>
+                        <span class="sku-badge">HWL-008</span>
                     </div>
                     <div class="gallery-card-info">
                         <h3>Crochet Item</h3>
+                        <p class="gallery-card-sku">SKU: HWL-008</p>
                         <p class="gallery-card-price">Price on request</p>
-                        <button class="btn btn-enquiry" data-product="Crochet Item 8" data-price="" data-image="images/crochet-08.jpeg">Purchase Enquiry</button>
+                        <button class="btn btn-enquiry" data-product="Crochet Item" data-sku="HWL-008" data-image="images/crochet-08.jpeg">Purchase Enquiry</button>
                     </div>
                 </div>
 
-                <div class="gallery-card" data-category="new-collection">
+                <div class="gallery-card" data-category="new-collection" data-sku="HWL-009">
                     <div class="gallery-card-image">
-                        <img src="images/crochet-09.jpeg" alt="Crochet Item 9" loading="lazy">
+                        <img src="images/crochet-09.jpeg" alt="Crochet Item" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-icon">🔍</span>
+                        </div>
+                        <span class="sku-badge">HWL-009</span>
                     </div>
                     <div class="gallery-card-info">
                         <h3>Crochet Item</h3>
+                        <p class="gallery-card-sku">SKU: HWL-009</p>
                         <p class="gallery-card-price">Price on request</p>
-                        <button class="btn btn-enquiry" data-product="Crochet Item 9" data-price="" data-image="images/crochet-09.jpeg">Purchase Enquiry</button>
+                        <button class="btn btn-enquiry" data-product="Crochet Item" data-sku="HWL-009" data-image="images/crochet-09.jpeg">Purchase Enquiry</button>
                     </div>
                 </div>
 
-                <div class="gallery-card" data-category="new-collection">
+                <div class="gallery-card" data-category="new-collection" data-sku="HWL-010">
                     <div class="gallery-card-image">
-                        <img src="images/crochet-10.jpeg" alt="Crochet Item 10" loading="lazy">
+                        <img src="images/crochet-10.jpeg" alt="Crochet Item" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-icon">🔍</span>
+                        </div>
+                        <span class="sku-badge">HWL-010</span>
                     </div>
                     <div class="gallery-card-info">
                         <h3>Crochet Item</h3>
+                        <p class="gallery-card-sku">SKU: HWL-010</p>
                         <p class="gallery-card-price">Price on request</p>
-                        <button class="btn btn-enquiry" data-product="Crochet Item 10" data-price="" data-image="images/crochet-10.jpeg">Purchase Enquiry</button>
+                        <button class="btn btn-enquiry" data-product="Crochet Item" data-sku="HWL-010" data-image="images/crochet-10.jpeg">Purchase Enquiry</button>
                     </div>
                 </div>
 
-                <div class="gallery-card" data-category="new-collection">
+                <div class="gallery-card" data-category="new-collection" data-sku="HWL-011">
                     <div class="gallery-card-image">
-                        <img src="images/crochet-11.jpeg" alt="Crochet Item 11" loading="lazy">
+                        <img src="images/crochet-11.jpeg" alt="Crochet Item" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-icon">🔍</span>
+                        </div>
+                        <span class="sku-badge">HWL-011</span>
                     </div>
                     <div class="gallery-card-info">
                         <h3>Crochet Item</h3>
+                        <p class="gallery-card-sku">SKU: HWL-011</p>
                         <p class="gallery-card-price">Price on request</p>
-                        <button class="btn btn-enquiry" data-product="Crochet Item 11" data-price="" data-image="images/crochet-11.jpeg">Purchase Enquiry</button>
+                        <button class="btn btn-enquiry" data-product="Crochet Item" data-sku="HWL-011" data-image="images/crochet-11.jpeg">Purchase Enquiry</button>
                     </div>
                 </div>
 
-                <div class="gallery-card" data-category="new-collection">
+                <div class="gallery-card" data-category="new-collection" data-sku="HWL-012">
                     <div class="gallery-card-image">
-                        <img src="images/crochet-12.jpeg" alt="Crochet Item 12" loading="lazy">
+                        <img src="images/crochet-12.jpeg" alt="Crochet Item" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-icon">🔍</span>
+                        </div>
+                        <span class="sku-badge">HWL-012</span>
                     </div>
                     <div class="gallery-card-info">
                         <h3>Crochet Item</h3>
+                        <p class="gallery-card-sku">SKU: HWL-012</p>
                         <p class="gallery-card-price">Price on request</p>
-                        <button class="btn btn-enquiry" data-product="Crochet Item 12" data-price="" data-image="images/crochet-12.jpeg">Purchase Enquiry</button>
+                        <button class="btn btn-enquiry" data-product="Crochet Item" data-sku="HWL-012" data-image="images/crochet-12.jpeg">Purchase Enquiry</button>
                     </div>
                 </div>
 
-                <!-- Flowers -->
-                <div class="gallery-card" data-category="flowers">
+                <!-- New images (13-16) -->
+                <div class="gallery-card" data-category="new-collection" data-sku="HWL-013">
                     <div class="gallery-card-image">
-                        <img src="images/sunflower_bouquet.jpg" alt="Crocheted Sunflower Bouquet" loading="lazy">
+                        <img src="images/crochet-13.png" alt="Crochet Item" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-icon">🔍</span>
+                        </div>
+                        <span class="sku-badge">HWL-013</span>
                     </div>
                     <div class="gallery-card-info">
-                        <h3>Crocheted Sunflower Bouquet</h3>
-                        <p class="gallery-card-price">₹1,200</p>
-                        <button class="btn btn-enquiry" data-product="Crocheted Sunflower Bouquet" data-price="1200" data-image="images/sunflower_bouquet.jpg">Purchase Enquiry</button>
+                        <h3>Crochet Item</h3>
+                        <p class="gallery-card-sku">SKU: HWL-013</p>
+                        <p class="gallery-card-price">Price on request</p>
+                        <button class="btn btn-enquiry" data-product="Crochet Item" data-sku="HWL-013" data-image="images/crochet-13.png">Purchase Enquiry</button>
                     </div>
                 </div>
 
-                <div class="gallery-card" data-category="flowers">
+                <div class="gallery-card" data-category="new-collection" data-sku="HWL-014">
                     <div class="gallery-card-image">
-                        <img src="images/sunflower_cone.jpg" alt="Crocheted Sunflower Cone" loading="lazy">
+                        <img src="images/crochet-14.png" alt="Crochet Item" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-icon">🔍</span>
+                        </div>
+                        <span class="sku-badge">HWL-014</span>
                     </div>
                     <div class="gallery-card-info">
-                        <h3>Crocheted Sunflower Cone</h3>
-                        <p class="gallery-card-price">₹950</p>
-                        <button class="btn btn-enquiry" data-product="Crocheted Sunflower Cone" data-price="950" data-image="images/sunflower_cone.jpg">Purchase Enquiry</button>
+                        <h3>Crochet Item</h3>
+                        <p class="gallery-card-sku">SKU: HWL-014</p>
+                        <p class="gallery-card-price">Price on request</p>
+                        <button class="btn btn-enquiry" data-product="Crochet Item" data-sku="HWL-014" data-image="images/crochet-14.png">Purchase Enquiry</button>
                     </div>
                 </div>
 
-                <div class="gallery-card" data-category="flowers">
+                <div class="gallery-card" data-category="new-collection" data-sku="HWL-015">
                     <div class="gallery-card-image">
-                        <img src="images/single_sunflower.jpg" alt="Single Crocheted Sunflower" loading="lazy">
+                        <img src="images/crochet-15.png" alt="Crochet Item" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-icon">🔍</span>
+                        </div>
+                        <span class="sku-badge">HWL-015</span>
                     </div>
                     <div class="gallery-card-info">
-                        <h3>Single Crocheted Sunflower</h3>
-                        <p class="gallery-card-price">₹250</p>
-                        <button class="btn btn-enquiry" data-product="Single Crocheted Sunflower" data-price="250" data-image="images/single_sunflower.jpg">Purchase Enquiry</button>
+                        <h3>Crochet Item</h3>
+                        <p class="gallery-card-sku">SKU: HWL-015</p>
+                        <p class="gallery-card-price">Price on request</p>
+                        <button class="btn btn-enquiry" data-product="Crochet Item" data-sku="HWL-015" data-image="images/crochet-15.png">Purchase Enquiry</button>
                     </div>
                 </div>
 
-                <div class="gallery-card" data-category="flowers">
+                <div class="gallery-card" data-category="new-collection" data-sku="HWL-016">
                     <div class="gallery-card-image">
-                        <img src="images/red_rose_accessory.jpg" alt="Crocheted Red Rose Accessory" loading="lazy">
+                        <img src="images/crochet-16.png" alt="Crochet Item" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-icon">🔍</span>
+                        </div>
+                        <span class="sku-badge">HWL-016</span>
                     </div>
                     <div class="gallery-card-info">
-                        <h3>Crocheted Red Rose Accessory</h3>
-                        <p class="gallery-card-price">₹600</p>
-                        <button class="btn btn-enquiry" data-product="Crocheted Red Rose Accessory" data-price="600" data-image="images/red_rose_accessory.jpg">Purchase Enquiry</button>
+                        <h3>Crochet Item</h3>
+                        <p class="gallery-card-sku">SKU: HWL-016</p>
+                        <p class="gallery-card-price">Price on request</p>
+                        <button class="btn btn-enquiry" data-product="Crochet Item" data-sku="HWL-016" data-image="images/crochet-16.png">Purchase Enquiry</button>
                     </div>
                 </div>
 
-                <div class="gallery-card" data-category="flowers">
-                    <div class="gallery-card-image">
-                        <img src="images/rose_basket_clip.jpg" alt="Crocheted Rose Basket Clip" loading="lazy">
+                <!-- Coming Soon Placeholders -->
+                <div class="gallery-card coming-soon-card" data-category="new-collection">
+                    <div class="gallery-card-image coming-soon-placeholder">
+                        <div class="coming-soon-content">
+                            <span class="coming-soon-icon">🧶</span>
+                            <p class="coming-soon-text">Coming Soon</p>
+                            <p class="coming-soon-subtext">Hooked With Love</p>
+                        </div>
                     </div>
                     <div class="gallery-card-info">
-                        <h3>Crocheted Rose Basket Clip</h3>
-                        <p class="gallery-card-price">₹500</p>
-                        <button class="btn btn-enquiry" data-product="Crocheted Rose Basket Clip" data-price="500" data-image="images/rose_basket_clip.jpg">Purchase Enquiry</button>
+                        <h3>New Creation</h3>
+                        <p class="gallery-card-price">Stay Tuned!</p>
                     </div>
                 </div>
 
-                <div class="gallery-card" data-category="flowers">
-                    <div class="gallery-card-image">
-                        <img src="images/peach_rose.jpg" alt="Peach Rose" loading="lazy">
+                <div class="gallery-card coming-soon-card" data-category="new-collection">
+                    <div class="gallery-card-image coming-soon-placeholder">
+                        <div class="coming-soon-content">
+                            <span class="coming-soon-icon">🧶</span>
+                            <p class="coming-soon-text">Coming Soon</p>
+                            <p class="coming-soon-subtext">Hooked With Love</p>
+                        </div>
                     </div>
                     <div class="gallery-card-info">
-                        <h3>Peach Rose</h3>
-                        <p class="gallery-card-price">₹300</p>
-                        <button class="btn btn-enquiry" data-product="Peach Rose" data-price="300" data-image="images/peach_rose.jpg">Purchase Enquiry</button>
-                    </div>
-                </div>
-
-                <!-- Fruits -->
-                <div class="gallery-card" data-category="fruits">
-                    <div class="gallery-card-image">
-                        <img src="images/cherry_pairs.jpg" alt="Crocheted Cherry Pair" loading="lazy">
-                    </div>
-                    <div class="gallery-card-info">
-                        <h3>Crocheted Cherry Pair</h3>
-                        <p class="gallery-card-price">₹450</p>
-                        <button class="btn btn-enquiry" data-product="Crocheted Cherry Pair" data-price="450" data-image="images/cherry_pairs.jpg">Purchase Enquiry</button>
-                    </div>
-                </div>
-
-                <div class="gallery-card" data-category="fruits">
-                    <div class="gallery-card-image">
-                        <img src="images/strawberry_pair.jpg" alt="Crocheted Strawberry Pair" loading="lazy">
-                    </div>
-                    <div class="gallery-card-info">
-                        <h3>Crocheted Strawberry Pair</h3>
-                        <p class="gallery-card-price">₹400</p>
-                        <button class="btn btn-enquiry" data-product="Crocheted Strawberry Pair" data-price="400" data-image="images/strawberry_pair.jpg">Purchase Enquiry</button>
-                    </div>
-                </div>
-
-                <div class="gallery-card" data-category="fruits">
-                    <div class="gallery-card-image">
-                        <img src="images/strawberry_keychain.jpg" alt="Strawberry Keychain" loading="lazy">
-                    </div>
-                    <div class="gallery-card-info">
-                        <h3>Strawberry Keychain</h3>
-                        <p class="gallery-card-price">₹350</p>
-                        <button class="btn btn-enquiry" data-product="Strawberry Keychain" data-price="350" data-image="images/strawberry_keychain.jpg">Purchase Enquiry</button>
-                    </div>
-                </div>
-
-                <!-- Hair Accessories -->
-                <div class="gallery-card" data-category="hair-accessories">
-                    <div class="gallery-card-image">
-                        <img src="images/strawberry_clip.jpg" alt="Crocheted Strawberry Hair Clip" loading="lazy">
-                    </div>
-                    <div class="gallery-card-info">
-                        <h3>Crocheted Strawberry Hair Clip</h3>
-                        <p class="gallery-card-price">₹350</p>
-                        <button class="btn btn-enquiry" data-product="Crocheted Strawberry Hair Clip" data-price="350" data-image="images/strawberry_clip.jpg">Purchase Enquiry</button>
-                    </div>
-                </div>
-
-                <div class="gallery-card" data-category="hair-accessories">
-                    <div class="gallery-card-image">
-                        <img src="images/rainbow_bow_clip.jpg" alt="Rainbow Crocheted Bow Clip" loading="lazy">
-                    </div>
-                    <div class="gallery-card-info">
-                        <h3>Rainbow Crocheted Bow Clip</h3>
-                        <p class="gallery-card-price">₹550</p>
-                        <button class="btn btn-enquiry" data-product="Rainbow Crocheted Bow Clip" data-price="550" data-image="images/rainbow_bow_clip.jpg">Purchase Enquiry</button>
-                    </div>
-                </div>
-
-                <div class="gallery-card" data-category="hair-accessories">
-                    <div class="gallery-card-image">
-                        <img src="images/rose_basket_clip.jpg" alt="Rose Basket Hair Clip" loading="lazy">
-                    </div>
-                    <div class="gallery-card-info">
-                        <h3>Rose Basket Hair Clip</h3>
-                        <p class="gallery-card-price">₹500</p>
-                        <button class="btn btn-enquiry" data-product="Rose Basket Hair Clip" data-price="500" data-image="images/rose_basket_clip.jpg">Purchase Enquiry</button>
-                    </div>
-                </div>
-
-                <div class="gallery-card" data-category="hair-accessories">
-                    <div class="gallery-card-image">
-                        <img src="images/lavender_scrunchie.jpg" alt="Lavender Crochet Scrunchie" loading="lazy">
-                    </div>
-                    <div class="gallery-card-info">
-                        <h3>Lavender Crochet Scrunchie</h3>
-                        <p class="gallery-card-price">₹400</p>
-                        <button class="btn btn-enquiry" data-product="Lavender Crochet Scrunchie" data-price="400" data-image="images/lavender_scrunchie.jpg">Purchase Enquiry</button>
-                    </div>
-                </div>
-
-                <!-- Lifestyle Accessories -->
-                <div class="gallery-card" data-category="lifestyle-accessories">
-                    <div class="gallery-card-image">
-                        <img src="images/phone_case.jpg" alt="Floral Crochet Phone Case" loading="lazy">
-                    </div>
-                    <div class="gallery-card-info">
-                        <h3>Floral Crochet Phone Case</h3>
-                        <p class="gallery-card-price">₹800</p>
-                        <button class="btn btn-enquiry" data-product="Floral Crochet Phone Case" data-price="800" data-image="images/phone_case.jpg">Purchase Enquiry</button>
-                    </div>
-                </div>
-
-                <div class="gallery-card" data-category="lifestyle-accessories">
-                    <div class="gallery-card-image">
-                        <img src="images/bear_amigurumi.jpg" alt="Bear Amigurumi" loading="lazy">
-                    </div>
-                    <div class="gallery-card-info">
-                        <h3>Bear Amigurumi</h3>
-                        <p class="gallery-card-price">₹650</p>
-                        <button class="btn btn-enquiry" data-product="Bear Amigurumi" data-price="650" data-image="images/bear_amigurumi.jpg">Purchase Enquiry</button>
+                        <h3>New Creation</h3>
+                        <p class="gallery-card-price">Stay Tuned!</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
     <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
-            <p>Made with 🧶 and ❤️ | hookedwithlove.in</p>
-            <p class="copyright">© 2026 Hooked With Love</p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <p class="footer-logo">🧶 Hooked With Love</p>
+                    <p class="footer-tagline">Handcrafted with care, each piece unique</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="index.html#about">About</a>
+                    <a href="#" data-open-contact>Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://wa.me/919985507347" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+                    <a href="mailto:Navyajashu444@gmail.com" aria-label="Email">📧</a>
+                </div>
+            </div>
+            <p class="copyright">© 2026 Hooked With Love | hookedwithlove.in</p>
         </div>
     </footer>
 
@@ -536,6 +411,15 @@
                     </span>
                 </a>
             </div>
+        </div>
+    </div>
+
+    <!-- Image Lightbox -->
+    <div class="lightbox-overlay" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">×</button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightboxImage">
+            <p class="lightbox-caption" id="lightboxCaption"></p>
         </div>
     </div>
 

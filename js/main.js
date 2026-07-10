@@ -8,7 +8,7 @@
     // ==========================================
     // Header scroll effect
     // ==========================================
-    const header = document.getElementById('siteHeader');
+    var header = document.getElementById('siteHeader');
 
     function handleHeaderScroll() {
         if (window.scrollY > 20) {
@@ -24,8 +24,8 @@
     // ==========================================
     // Mobile menu toggle
     // ==========================================
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mainNav = document.getElementById('mainNav');
+    var mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    var mainNav = document.getElementById('mainNav');
 
     if (mobileMenuBtn && mainNav) {
         mobileMenuBtn.addEventListener('click', function () {
@@ -33,7 +33,6 @@
             mobileMenuBtn.classList.toggle('active');
         });
 
-        // Close mobile menu when a nav link is clicked
         mainNav.querySelectorAll('a').forEach(function (link) {
             link.addEventListener('click', function () {
                 mainNav.classList.remove('open');
@@ -43,36 +42,35 @@
     }
 
     // ==========================================
-    // Modal functionality
+    // Modal functionality (SKU-based enquiry)
     // ==========================================
-    const modal = document.getElementById('contactModal');
-    const modalClose = document.getElementById('modalClose');
-    const whatsappLink = document.getElementById('whatsappLink');
-    const modalProductPreview = document.getElementById('modalProductPreview');
-    const modalProductImage = document.getElementById('modalProductImage');
-    const modalProductName = document.getElementById('modalProductName');
-    const modalTitle = document.getElementById('modalTitle');
+    var modal = document.getElementById('contactModal');
+    var modalClose = document.getElementById('modalClose');
+    var whatsappLink = document.getElementById('whatsappLink');
+    var modalProductPreview = document.getElementById('modalProductPreview');
+    var modalProductImage = document.getElementById('modalProductImage');
+    var modalProductName = document.getElementById('modalProductName');
+    var modalTitle = document.getElementById('modalTitle');
 
-    function openModal(productName, price, imageSrc) {
+    function openModal(productName, sku, imageSrc) {
         if (!modal) return;
 
-        // If product info is provided, show product preview
-        if (productName && modalProductPreview) {
+        if (productName && sku && modalProductPreview) {
             modalProductPreview.style.display = 'block';
             if (modalProductImage) {
                 modalProductImage.src = imageSrc || '';
                 modalProductImage.alt = productName;
             }
             if (modalProductName) {
-                modalProductName.textContent = productName;
+                modalProductName.textContent = productName + ' (' + sku + ')';
             }
             if (modalTitle) {
                 modalTitle.textContent = 'Purchase Enquiry';
             }
 
-            // Update WhatsApp link with product info
+            // WhatsApp link uses SKU instead of price
             if (whatsappLink) {
-                var message = 'Hello Hooked With Love, I am interested in purchasing ' + productName + ' priced at ₹' + price + '.';
+                var message = 'Hello Hooked With Love, I am interested in item ' + sku + ' (' + productName + '). Please share availability and pricing.';
                 whatsappLink.href = 'https://wa.me/919985507347?text=' + encodeURIComponent(message);
             }
         } else {
@@ -98,12 +96,10 @@
         document.body.style.overflow = '';
     }
 
-    // Close button
     if (modalClose) {
         modalClose.addEventListener('click', closeModal);
     }
 
-    // Click outside to close
     if (modal) {
         modal.addEventListener('click', function (e) {
             if (e.target === modal) {
@@ -112,10 +108,10 @@
         });
     }
 
-    // Escape key to close
     document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') {
             closeModal();
+            closeLightbox();
         }
     });
 
@@ -127,26 +123,83 @@
         });
     });
 
-    // Purchase enquiry buttons (product-specific)
+    // Purchase enquiry buttons (product-specific with SKU)
     document.querySelectorAll('.btn-enquiry').forEach(function (btn) {
         btn.addEventListener('click', function () {
             var productName = this.getAttribute('data-product');
-            var price = this.getAttribute('data-price');
+            var sku = this.getAttribute('data-sku');
             var imageSrc = this.getAttribute('data-image');
-            openModal(productName, price, imageSrc);
+            openModal(productName, sku, imageSrc);
+        });
+    });
+
+    // ==========================================
+    // Lightbox functionality
+    // ==========================================
+    var lightbox = document.getElementById('lightbox');
+    var lightboxImage = document.getElementById('lightboxImage');
+    var lightboxCaption = document.getElementById('lightboxCaption');
+    var lightboxClose = document.getElementById('lightboxClose');
+
+    function openLightbox(imgSrc, caption) {
+        if (!lightbox || !lightboxImage) return;
+        lightboxImage.src = imgSrc;
+        if (lightboxCaption) {
+            lightboxCaption.textContent = caption || '';
+        }
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        if (!lightbox) return;
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    if (lightboxClose) {
+        lightboxClose.addEventListener('click', closeLightbox);
+    }
+
+    if (lightbox) {
+        lightbox.addEventListener('click', function (e) {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+    }
+
+    // Click on gallery card images to open lightbox
+    document.querySelectorAll('.gallery-card-image').forEach(function (cardImage) {
+        var img = cardImage.querySelector('img');
+        if (!img) return;
+
+        cardImage.style.cursor = 'pointer';
+        cardImage.addEventListener('click', function () {
+            var card = cardImage.closest('.gallery-card');
+            var sku = card ? card.getAttribute('data-sku') : '';
+            var name = card ? card.querySelector('h3') : null;
+            var caption = '';
+            if (name && sku) {
+                caption = name.textContent + ' — ' + sku;
+            } else if (name) {
+                caption = name.textContent;
+            }
+            openLightbox(img.src, caption);
         });
     });
 
     // ==========================================
     // Gallery filtering
     // ==========================================
-    const filterTabs = document.querySelectorAll('.filter-tab');
-    const galleryCards = document.querySelectorAll('.gallery-card');
-    const breadcrumbCategorySep = document.querySelector('.breadcrumb-category-sep');
-    const breadcrumbCategory = document.querySelector('.breadcrumb-category');
+    var filterTabs = document.querySelectorAll('.filter-tab');
+    var galleryCards = document.querySelectorAll('.gallery-card');
+    var breadcrumbCategorySep = document.querySelector('.breadcrumb-category-sep');
+    var breadcrumbCategory = document.querySelector('.breadcrumb-category');
 
-    const categoryNames = {
+    var categoryNames = {
         'all': 'All',
+        'new-collection': 'New Collection',
         'flowers': 'Flowers',
         'fruits': 'Fruits',
         'hair-accessories': 'Hair Accessories',
@@ -154,7 +207,6 @@
     };
 
     function filterGallery(category) {
-        // Update active tab
         filterTabs.forEach(function (tab) {
             tab.classList.remove('active');
             tab.setAttribute('aria-selected', 'false');
@@ -165,7 +217,6 @@
             activeTab.setAttribute('aria-selected', 'true');
         }
 
-        // Update breadcrumb
         if (breadcrumbCategorySep && breadcrumbCategory) {
             if (category === 'all') {
                 breadcrumbCategorySep.style.display = 'none';
@@ -176,13 +227,11 @@
             }
         }
 
-        // Fade out cards
         galleryCards.forEach(function (card) {
             card.classList.add('fade-out');
             card.classList.remove('fade-in');
         });
 
-        // After fade out, show/hide and fade in
         setTimeout(function () {
             galleryCards.forEach(function (card) {
                 var cardCategory = card.getAttribute('data-category');
@@ -199,13 +248,49 @@
         }, 200);
     }
 
-    // Attach filter click events
     filterTabs.forEach(function (tab) {
         tab.addEventListener('click', function () {
             var category = this.getAttribute('data-category');
             filterGallery(category);
         });
     });
+
+    // ==========================================
+    // Back to Top button
+    // ==========================================
+    var backToTopBtn = document.getElementById('backToTop');
+
+    if (backToTopBtn) {
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 400) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        }, { passive: true });
+
+        backToTopBtn.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    // ==========================================
+    // Lazy load animation (fade in on scroll)
+    // ==========================================
+    if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('loaded');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.gallery-card').forEach(function (card) {
+            observer.observe(card);
+        });
+    }
 
     // ==========================================
     // Smooth scroll for anchor links
