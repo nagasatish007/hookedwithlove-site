@@ -73,7 +73,7 @@
             // Update WhatsApp link with product info
             if (whatsappLink) {
                 var message = 'Hello Hooked With Love, I am interested in purchasing ' + productName + ' priced at ₹' + price + '.';
-                whatsappLink.href = 'https://wa.me/919876543210?text=' + encodeURIComponent(message);
+                whatsappLink.href = 'https://wa.me/919985507347?text=' + encodeURIComponent(message);
             }
         } else {
             // General contact modal
@@ -84,7 +84,7 @@
                 modalTitle.textContent = 'Get in Touch';
             }
             if (whatsappLink) {
-                whatsappLink.href = 'https://wa.me/919876543210?text=' + encodeURIComponent('Hello Hooked With Love, I am interested in your crochet creations!');
+                whatsappLink.href = 'https://wa.me/919985507347?text=' + encodeURIComponent('Hello Hooked With Love, I am interested in your crochet creations!');
             }
         }
 
