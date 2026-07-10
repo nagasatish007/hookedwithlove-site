@@ -1118,3 +1118,53 @@ button {
         text-align: left;
     }
 }
+
+/* ============================================
+   Social Icons (Font Awesome)
+   ============================================ */
+.nav-social-link {
+    font-size: 1.2rem !important;
+    color: #E1306C !important;
+    opacity: 1 !important;
+    transition: transform var(--transition), color var(--transition);
+}
+
+.nav-social-link:hover {
+    transform: scale(1.2);
+    color: #C13584 !important;
+}
+
+.nav-social-link::after {
+    display: none !important;
+}
+
+.footer-social a {
+    font-size: 1.4rem;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: white;
+    color: var(--color-dark);
+    transition: all var(--transition);
+    box-shadow: 0 2px 8px var(--color-shadow);
+}
+
+.footer-social a:hover {
+    transform: scale(1.15) translateY(-2px);
+    box-shadow: 0 4px 12px var(--color-shadow-hover);
+}
+
+.footer-social a[aria-label="Instagram"] {
+    color: #E1306C;
+}
+
+.footer-social a[aria-label="WhatsApp"] {
+    color: #25D366;
+}
+
+.footer-social a[aria-label="Email"] {
+    color: var(--color-sage-dark);
+}
