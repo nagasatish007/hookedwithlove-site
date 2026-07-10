@@ -4,15 +4,19 @@
 
 /* Custom Properties */
 :root {
-    --color-beige: #f5f0eb;
-    --color-rose: #e8c4c8;
-    --color-sage: #8fae7e;
-    --color-cream: #faf8f5;
-    --color-dark: #3d3630;
-    --color-rose-light: #f5e1e4;
-    --color-sage-dark: #6d9259;
+    --color-beige: #fef3e8;
+    --color-rose: #e8a4b8;
+    --color-sage: #7cb67a;
+    --color-cream: #fffaf5;
+    --color-dark: #2d2420;
+    --color-rose-light: #fce4ec;
+    --color-sage-dark: #4caf50;
     --color-shadow: rgba(61, 54, 48, 0.08);
-    --color-shadow-hover: rgba(61, 54, 48, 0.15);
+    --color-shadow-hover: rgba(61, 54, 48, 0.18);
+    --color-lavender: #e8d5f5;
+    --color-peach: #ffccbc;
+    --color-mint: #c8e6c9;
+    --color-gold: #fff3cd;
 
     --font-heading: 'Playfair Display', Georgia, serif;
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -182,9 +186,11 @@ button {
     position: absolute;
     inset: 0;
     background: 
-        radial-gradient(ellipse at 30% 20%, rgba(232, 196, 200, 0.3) 0%, transparent 50%),
-        radial-gradient(ellipse at 70% 80%, rgba(143, 174, 126, 0.15) 0%, transparent 50%),
-        linear-gradient(135deg, var(--color-beige) 0%, var(--color-cream) 50%, var(--color-beige) 100%);
+        radial-gradient(ellipse at 20% 20%, rgba(232, 164, 184, 0.35) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 30%, rgba(232, 213, 245, 0.3) 0%, transparent 40%),
+        radial-gradient(ellipse at 50% 80%, rgba(200, 230, 201, 0.25) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 60%, rgba(255, 204, 188, 0.2) 0%, transparent 40%),
+        linear-gradient(135deg, var(--color-beige) 0%, var(--color-cream) 30%, var(--color-rose-light) 60%, var(--color-lavender) 100%);
 }
 
 .hero-overlay::before {
@@ -382,7 +388,7 @@ button {
    Footer
    ============================================ */
 .site-footer {
-    background: var(--color-beige);
+    background: linear-gradient(135deg, var(--color-beige) 0%, var(--color-rose-light) 50%, var(--color-lavender) 100%);
     padding: 40px 0;
     text-align: center;
 }
@@ -404,6 +410,7 @@ button {
 .gallery-section {
     padding: 100px 0 60px;
     min-height: 100vh;
+    background: linear-gradient(180deg, var(--color-cream) 0%, var(--color-rose-light) 30%, var(--color-lavender) 60%, var(--color-mint) 100%);
 }
 
 /* Breadcrumb */
@@ -476,6 +483,7 @@ button {
     background: white;
     box-shadow: 0 2px 12px var(--color-shadow);
     color: var(--color-sage-dark);
+    border: 1px solid var(--color-rose);
 }
 
 .filter-tab.active::after {
@@ -832,32 +840,26 @@ button {
 }
 
 /* ============================================
-   SKU Badge
+   SKU Badge (displayed below image in card info)
    ============================================ */
 .gallery-card-image {
     position: relative;
 }
 
 .sku-badge {
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    background: rgba(61, 54, 48, 0.85);
-    color: white;
-    font-size: 0.7rem;
-    font-weight: 600;
-    padding: 4px 8px;
-    border-radius: 4px;
-    letter-spacing: 0.5px;
-    z-index: 2;
+    display: none;
 }
 
 .gallery-card-sku {
     font-size: 0.75rem;
-    color: var(--color-dark);
-    opacity: 0.5;
-    margin-bottom: 4px;
-    letter-spacing: 0.3px;
+    font-weight: 600;
+    color: var(--color-rose);
+    background: var(--color-rose-light);
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
 }
 
 /* ============================================
