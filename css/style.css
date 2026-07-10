@@ -1168,3 +1168,15 @@ button {
 .footer-social a[aria-label="Email"] {
     color: var(--color-sage-dark);
 }
+
+/* ============================================
+   Rainbow Text for "Navya's"
+   ============================================ */
+.rainbow-text {
+    font-style: italic;
+    background: linear-gradient(90deg, #ff0000, #ff7700, #ffdd00, #00cc00, #0077ff, #8800ff, #ff00aa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
